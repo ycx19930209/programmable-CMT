@@ -1,0 +1,7 @@
+table_set_default ipv4_lpm drop
+table_set_default ipv4_lpm1 drop
+table_set_default ipv4_lpm2 drop
+table_add ipv4_lpm ipv4_forward 10.0.1.1/32 => 00:00:00:00:01:01 1
+table_add ipv4_lpm1 ipv4_forward 10.0.2.2/32 => 00:00:00:02:02:00 2
+table_add ipv4_lpm2 ipv4_forward 10.0.2.2/32 => 00:00:00:02:02:00 3
+register_write count 0 0
